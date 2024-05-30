@@ -193,3 +193,17 @@ h1 {
     font-size: 16px;
     cursor: pointer;
 }
+
+
+
+@media only screen and (max-width: 1140px) {
+    .container {
+        max-width: none;
+        width: 100%;
+        padding: 0 50px;
+    }
+    .application__items {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
