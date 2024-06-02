@@ -1,0 +1,110 @@
+.login {
+    background-color: #F3F3F3;
+}
+
+.login__inner {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 30px;
+    height: 100%;
+}
+
+.login__inner .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__inner .img img {
+    max-width: 539px;
+}
+
+.form {
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 35px;
+    
+    box-shadow: 0 12px 50px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff; 
+}
+
+.form img {
+    margin-bottom: 40px;
+}
+
+.form h1 {
+    font-family: Montserrat-Bold;
+    font-size: 28px;
+    color: #0F0C39;
+    margin-bottom: 20px;
+}
+
+.form p {
+    text-align: center;
+    font-family: Montserrat-Regular;
+    font-size: 18px;
+    color: #0F0C39;
+    margin-bottom: 20px;
+}
+
+
+#registrationForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#registrationForm input {
+    padding: 18px 20px;
+    border-radius: 8px;
+    border: 1px solid #C6C5CA;
+    background-color: #F3F3F3;
+    font-family: Montserrat-Regular;
+    font-size: 16px;
+    color: #C6C5CA;
+    width: 100%;
+}
+
+#registrationForm input:focus {
+    font-family: Montserrat-Medium;
+    color: #000;
+}
+
+#registrationForm p {
+    text-align: center;
+    font-family: Montserrat-Regular;
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 0;
+    color: #C6C5CA;
+}
+
+.button {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0;
+    font-family: Montserrat-SemiBold;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 8px;
+    background-color: #741ADE;
+    margin-top: 10px;
+   
+}
+
+.registration__button {
+    background-color: #fff;
+    border: 1px solid #741ADE;
+    color: #741ADE;
+    margin-top: 0;
+    margin-bottom: 0;
+}
