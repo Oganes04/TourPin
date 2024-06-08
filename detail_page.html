@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="usersList"></div>
+    <div class="page">
+        <img class="bg__img" src="./img/bg_img.png" alt="">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <a href="index.html" class="heder__logo">
+                        <img src="./img/logo.png" alt="">
+                    </a>
+                    <span class="header__login" id="exit__account">Выйти из аккаунта</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="offer">
+                <div class="container">
+                    <div class="offer__inner">
+                        <h1>Добро пожаловать в «TourPin» Agent</h1>
+                    </div>
+                </div>
+            </section>
+
+            <section class="application detail__page">
+                <div class="container">
+                    <div class="application__inner">
+                       
+                        <div class="application__item-button" onclick="window.location.href='main.html';">
+                            <svg width="17" height="13" viewBox="0 0 17 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.8611 6.80429C16.8611 7.07832 16.6387 7.3007 16.3647 7.3007H1.69482L6.25713 11.863C6.45098 12.0569 6.45098 12.3711 6.25713 12.565C6.16407 12.6581 6.0378 12.7105 5.90613 12.7104C5.77436 12.7106 5.64795 12.6583 5.55489 12.565L0.145474 7.1555C0.0523368 7.06245 4.54986e-06 6.93618 2.96681e-10 6.80453C-4.54926e-06 6.67287 0.0523191 6.5466 0.14545 6.45354L5.55516 1.04361C5.74902 0.849725 6.06351 0.849726 6.25739 1.04359C6.4512 1.23769 6.4512 1.55193 6.25737 1.74582L1.69531 6.30783H16.3647C16.6387 6.30785 16.8611 6.52999 16.8611 6.80429Z" fill="white"/>
+                            </svg>
+                            <span>Назад к заявкам</span>
+                        </div>
+
+
+
+                        <div class="order__details">
+                            <div class="order__details-row">
+                                <h2>Подробности о заявке</h2>
+                                <p>Предложений по заявке: <span>Нет</span></p>
+                            </div>
+
+                            <div class="order__details-items">
+                                
+                            </div>
+                        </div>
+
+
+                        <div class="order__offer">
+                            <h2>Выдвинуть свое предложение по заявке</h2>
+                            
+                        </div>
+
+                    
+
+
+                    </div>
+                </div>
+            </section>
+
+           
+            
+
+        </main>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-database-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.9.3/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
+    <script src="./js/detail.js"></script>
+    
+</body>
+</html>

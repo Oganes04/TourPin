@@ -34,6 +34,6 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     })
     .catch((error) => {
       console.error("Ошибка при входе:", error.message);
-      alert("Ошибка при входе: " + error.message);
+      // alert("Ошибка при входе: " + error.message);
     });
 });
