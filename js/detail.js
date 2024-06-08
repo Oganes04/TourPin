@@ -295,9 +295,9 @@ const addImgHandler = () => {
       var country = childData.country;
       var order_ID = new URLSearchParams(window.location.search).get('id');
       var night = $('.selected__direction').text();
-      var fileNameWithExtension = hotelImg.name; 
+  
       // Создаем путь для хранения файла в Firebase Storage
-      var imageRef = storageRef.child(fileNameWithExtension);
+      var imageRef = storageRef.child(`${order_ID}.jpg`);
   
       // Загружаем файл в Firebase Storage
       imageRef.put(hotelImg).then(function(snapshot) {
