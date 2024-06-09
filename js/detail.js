@@ -146,7 +146,8 @@ const firebaseConfig = {
                     
                 <span>Загрузите фотографию отеля</span>
             </label>
-            <input type="file" name="hotel_img" id="add-single-img" accept="image/jpeg,image/png" />
+
+            <input type="file" id="add-single-img" name="hotel_img" accept=".jpg,.jpeg,.png" style="opacity: 0; padding:0; height: 0;" />
         </div>
         <p>Название отеля</p>
         <input type="text" id="hotel_name" name="hotel_name" placeholder="Название отеля" required>
@@ -229,6 +230,207 @@ const firebaseConfig = {
              
         </div>
 
+
+        
+        <p>В тур включено:</p>
+
+        <div class="order__offer-row-checks">
+            
+            <div class="custom__checkbox">
+                <input type="checkbox" id="flight" name="flight" />
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_134_149)">
+                    <path d="M16.6667 13.2378C16.6152 13.2896 16.554 13.3307 16.4866 13.3587C16.4192 13.3867 16.3469 13.4012 16.2739 13.4012C16.2009 13.4012 16.1286 13.3867 16.0612 13.3587C15.9938 13.3307 15.9326 13.2896 15.8811 13.2378L15.0956 12.4523C15.0438 12.4008 15.0027 12.3396 14.9747 12.2722C14.9466 12.2048 14.9322 12.1325 14.9322 12.0595C14.9322 11.9865 14.9466 11.9142 14.9747 11.8468C15.0027 11.7794 15.0438 11.7182 15.0956 11.6667L16.6667 10.0956C16.7182 10.044 16.7794 10.003 16.8468 9.97504C16.9142 9.94709 16.9865 9.9327 17.0594 9.9327C17.1324 9.9327 17.2047 9.94709 17.2721 9.97504C17.3394 10.003 17.4007 10.044 17.4522 10.0956L18.2378 10.8811C18.2895 10.9326 18.3306 10.9938 18.3587 11.0612C18.3867 11.1286 18.4011 11.2009 18.4011 11.2739C18.4011 11.3469 18.3867 11.4192 18.3587 11.4866C18.3306 11.554 18.2895 11.6152 18.2378 11.6667L16.6667 13.2378ZM8.33333 4.90448C8.28186 4.95625 8.22066 4.99733 8.15325 5.02536C8.08584 5.0534 8.01356 5.06783 7.94056 5.06783C7.86755 5.06783 7.79527 5.0534 7.72786 5.02536C7.66045 4.99733 7.59925 4.95625 7.54778 4.90448L6.76222 4.11892C6.71045 4.06745 6.66937 4.00625 6.64134 3.93884C6.6133 3.87143 6.59887 3.79915 6.59887 3.72614C6.59887 3.65314 6.6133 3.58085 6.64134 3.51345C6.66937 3.44604 6.71045 3.38484 6.76222 3.33337L8.33333 1.76225C8.38488 1.71062 8.44611 1.66965 8.5135 1.6417C8.5809 1.61375 8.65315 1.59937 8.72611 1.59937C8.79907 1.59937 8.87132 1.61375 8.93872 1.6417C9.00612 1.66965 9.06734 1.71062 9.11889 1.76225L9.90444 2.54781C9.95621 2.59928 9.9973 2.66048 10.0253 2.72789C10.0534 2.7953 10.0678 2.86758 10.0678 2.94059C10.0678 3.01359 10.0534 3.08588 10.0253 3.15328C9.9973 3.22069 9.95621 3.28189 9.90444 3.33337L8.33333 4.90448Z" fill="#66757F"/>
+                    <path d="M1.11111 12.2223C2.22222 12.2223 7.22222 12.7779 7.22222 12.7779C7.22222 12.7779 7.77778 17.7779 7.77778 18.889C7.77778 20.0001 6.66667 20.0001 6.11111 19.4446C5.55555 18.889 3.88889 16.1112 3.88889 16.1112C3.88889 16.1112 1.11111 14.4446 0.555555 13.889C-8.19564e-07 13.3334 -8.19564e-07 12.2223 1.11111 12.2223ZM2.22222 3.35511C3.88889 3.33344 16.1111 3.889 16.1111 3.889C16.1111 3.889 16.6244 16.1112 16.6456 17.7779C16.6667 19.4446 15.1106 20.0012 14.5 17.7784C13.8894 15.5557 11.6667 8.33344 11.6667 8.33344C11.6667 8.33344 3.91389 5.87955 2.21944 5.499C-8.9407e-07 5.00011 0.554999 3.37622 2.22222 3.35511Z" fill="#55ACEE"/>
+                    <path d="M15 1.6667C16.1111 0.555594 18.8889 3.80576e-05 19.4444 0.555594C20 1.11115 19.4444 3.88893 18.3333 5.00004C17.2222 6.11115 7.77778 15 7.77778 15C7.77778 15 4.16667 17.5 3.33333 16.6667C2.5 15.8334 5 12.2223 5 12.2223C5 12.2223 13.8889 2.77782 15 1.6667Z" fill="#CCD6DD"/>
+                    <path d="M7.77778 12.2223C7.77778 12.2223 8.05556 12.5001 5.55556 15.0001C3.05556 17.5001 2.77778 17.2223 2.77778 17.2223C2.77778 17.2223 2.5 16.9445 5 14.4445C7.5 11.9445 7.77778 12.2223 7.77778 12.2223ZM16.1111 2.2223C16.5531 2.2223 16.9771 2.3979 17.2896 2.71046C17.6022 3.02302 17.7778 3.44694 17.7778 3.88897H18.225C18.2883 3.71397 18.3333 3.53064 18.3333 3.33341C18.3333 2.89139 18.1577 2.46746 17.8452 2.1549C17.5326 1.84234 17.1087 1.66675 16.6667 1.66675C16.4694 1.66675 16.2861 1.71175 16.1111 1.77508V2.2223Z" fill="#66757F"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_134_149">
+                    <rect width="20" height="20" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                <span>Перелет</span>
+            </div
+            
+        </div>
+        <div class="custom__checkbox">
+                <input type="checkbox" id="transfer" name="transfer" />
+                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_134_124)">
+                    <path d="M0.5 11.6667V15.5556C0.5 15.9977 0.675595 16.4216 0.988155 16.7341C1.30072 17.0467 1.72464 17.2223 2.16667 17.2223H18.8333C19.2754 17.2223 19.6993 17.0467 20.0118 16.7341C20.3244 16.4216 20.5 15.9977 20.5 15.5556V11.6667H0.5Z" fill="#808285"/>
+                    <path d="M20.5 12.2223V7.22233C20.5 6.30178 18.6428 5.55566 17.7222 5.55566H6.61111C2.16667 5.55566 0.5 6.85733 0.5 7.77789V12.2223H20.5Z" fill="#CCD6DD"/>
+                    <path d="M0.5 12.2222H20.5V13.8888H0.5V12.2222Z" fill="#939598"/>
+                    <path d="M4.38888 13.8889C3.57611 13.8893 2.79149 14.1867 2.1827 14.7252C1.57391 15.2637 1.18293 16.0062 1.08333 16.8128C1.38332 17.0753 1.76801 17.2207 2.16666 17.2222H7.72222C7.72222 16.3382 7.37103 15.4903 6.74591 14.8652C6.12078 14.2401 5.27294 13.8889 4.38888 13.8889ZM19.9167 16.8128C19.8119 15.9715 19.3903 15.2017 18.7378 14.6603C18.0854 14.1189 17.2511 13.8466 16.4049 13.8988C15.5587 13.951 14.7641 14.3238 14.1832 14.9412C13.6022 15.5587 13.2784 16.3744 13.2778 17.2222H18.8333C19.2494 17.2222 19.625 17.0645 19.9167 16.8128Z" fill="#BCBEC0"/>
+                    <path d="M4.38889 19.4444C5.61619 19.4444 6.61112 18.4495 6.61112 17.2222C6.61112 15.9949 5.61619 15 4.38889 15C3.16159 15 2.16667 15.9949 2.16667 17.2222C2.16667 18.4495 3.16159 19.4444 4.38889 19.4444Z" fill="black"/>
+                    <path d="M4.38888 18.3333C5.00253 18.3333 5.49999 17.8358 5.49999 17.2222C5.49999 16.6085 5.00253 16.1111 4.38888 16.1111C3.77523 16.1111 3.27777 16.6085 3.27777 17.2222C3.27777 17.8358 3.77523 18.3333 4.38888 18.3333Z" fill="#99AAB5"/>
+                    <path d="M16.6111 19.4444C17.8384 19.4444 18.8333 18.4495 18.8333 17.2222C18.8333 15.9949 17.8384 15 16.6111 15C15.3838 15 14.3889 15.9949 14.3889 17.2222C14.3889 18.4495 15.3838 19.4444 16.6111 19.4444Z" fill="black"/>
+                    <path d="M16.6111 18.3333C17.2248 18.3333 17.7222 17.8358 17.7222 17.2222C17.7222 16.6085 17.2248 16.1111 16.6111 16.1111C15.9975 16.1111 15.5 16.6085 15.5 17.2222C15.5 17.8358 15.9975 18.3333 16.6111 18.3333Z" fill="#99AAB5"/>
+                    <path d="M0.5 13.8889H1.05556V15.0001H0.5V13.8889ZM19.9444 12.7778H20.5V13.8889H19.9444V12.7778Z" fill="#F4900C"/>
+                    <path d="M1.05556 7.22217H20.5V12.7777H1.05556V7.22217Z" fill="#58595B"/>
+                    <path d="M1.61111 7.22217H0.69C0.561111 7.41328 0.5 7.60272 0.5 7.77772V13.8888H1.61111C1.9058 13.8888 2.18841 13.7718 2.39679 13.5634C2.60516 13.355 2.72222 13.0724 2.72222 12.7777V8.33328C2.72222 8.03859 2.60516 7.75598 2.39679 7.54761C2.18841 7.33923 1.9058 7.22217 1.61111 7.22217Z" fill="#292F33"/>
+                    <path d="M17.7222 11.111C17.7222 11.2584 17.6637 11.3997 17.5595 11.5039C17.4553 11.6081 17.314 11.6666 17.1667 11.6666H4.38888C4.24154 11.6666 4.10023 11.6081 3.99605 11.5039C3.89186 11.3997 3.83333 11.2584 3.83333 11.111V8.88881C3.83333 8.74146 3.89186 8.60016 3.99605 8.49597C4.10023 8.39178 4.24154 8.33325 4.38888 8.33325H17.1667C17.314 8.33325 17.4553 8.39178 17.5595 8.49597C17.6637 8.60016 17.7222 8.74146 17.7222 8.88881V11.111Z" fill="#55ACEE"/>
+                    <path d="M19.9444 10.5557H20.5V11.6668H19.9444V10.5557Z" fill="#FFAC33"/>
+                    <path d="M1.05556 8.33325H0.5V12.7777H1.05556C1.2029 12.7777 1.34421 12.7192 1.44839 12.615C1.55258 12.5108 1.61111 12.3695 1.61111 12.2221V8.88881C1.61111 8.74147 1.55258 8.60016 1.44839 8.49597C1.34421 8.39178 1.2029 8.33325 1.05556 8.33325Z" fill="#55ACEE"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_134_124">
+                    <rect width="20" height="20" fill="white" transform="translate(0.5)"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+
+                <span>Трансфер</span>
+            </div
+            </div>
+            <div class="custom__checkbox">
+            <input type="checkbox" id="insurance" name="insurance" />
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M19.4444 6.66656C19.4444 6.111 18.8889 4.44434 17.2222 4.44434H5.22278C4.45778 4.44434 3.395 5.43934 2.83278 6.66656L1.11111 9.44434C0.303889 9.77711 0 10.7393 0 11.6666V14.9999C0 15.5893 0.234126 16.1545 0.650874 16.5712C1.06762 16.988 1.63285 17.2221 2.22222 17.2221H17.7778C18.3671 17.2221 18.9324 16.988 19.3491 16.5712C19.7659 16.1545 20 15.5893 20 14.9999V10.5554C20 9.98489 19.4444 6.66656 19.4444 6.66656Z" fill="#CCD6DD"/>
+                <path d="M5.00001 13.8889C4.12972 13.8893 3.29411 14.2302 2.67191 14.8387C2.0497 15.4472 1.6903 16.275 1.67056 17.145C1.84834 17.19 2.03056 17.2222 2.22223 17.2222H8.33334C8.33334 16.3382 7.98215 15.4903 7.35703 14.8652C6.73191 14.2401 5.88406 13.8889 5.00001 13.8889ZM18.3295 17.1445C18.3097 16.2745 17.9503 15.4467 17.3281 14.8383C16.7059 14.2299 15.8702 13.8891 15 13.8889C13.16 13.8889 11.6667 15.3817 11.6667 17.2222H17.7778C17.9695 17.2222 18.1522 17.19 18.3295 17.1445Z" fill="#E1E8ED"/>
+                <path d="M4.99999 19.4444C6.22729 19.4444 7.22222 18.4495 7.22222 17.2222C7.22222 15.9949 6.22729 15 4.99999 15C3.77269 15 2.77777 15.9949 2.77777 17.2222C2.77777 18.4495 3.77269 19.4444 4.99999 19.4444Z" fill="#292F33"/>
+                <path d="M5 18.3333C5.61365 18.3333 6.11111 17.8358 6.11111 17.2222C6.11111 16.6085 5.61365 16.1111 5 16.1111C4.38635 16.1111 3.88889 16.6085 3.88889 17.2222C3.88889 17.8358 4.38635 18.3333 5 18.3333Z" fill="#99AAB5"/>
+                <path d="M15 19.4444C16.2273 19.4444 17.2222 18.4495 17.2222 17.2222C17.2222 15.9949 16.2273 15 15 15C13.7727 15 12.7778 15.9949 12.7778 17.2222C12.7778 18.4495 13.7727 19.4444 15 19.4444Z" fill="#292F33"/>
+                <path d="M15 18.3333C15.6136 18.3333 16.1111 17.8358 16.1111 17.2222C16.1111 16.6085 15.6136 16.1111 15 16.1111C14.3863 16.1111 13.8889 16.6085 13.8889 17.2222C13.8889 17.8358 14.3863 18.3333 15 18.3333Z" fill="#99AAB5"/>
+                <path d="M0 11.6668H20V13.3334H0V11.6668ZM17.2222 7.22233H15.5556V5.55566H14.4444V7.22233H12.7778V8.33344H14.4444V10.0001H15.5556V8.33344H17.2222V7.22233Z" fill="#DD2E44"/>
+                <path d="M4.44445 5.55566H7.22223V9.44455H2.22223L4.44445 5.55566Z" fill="#55ACEE"/>
+                <path d="M8.33332 3.61117C8.33332 3.83218 8.24552 4.04414 8.08924 4.20042C7.93296 4.3567 7.721 4.4445 7.49999 4.4445H6.38888C6.16786 4.4445 5.9559 4.3567 5.79962 4.20042C5.64334 4.04414 5.55554 3.83218 5.55554 3.61117C5.55554 3.39015 5.64334 3.17819 5.79962 3.02191C5.9559 2.86563 6.16786 2.77783 6.38888 2.77783H7.49999C7.721 2.77783 7.93296 2.86563 8.08924 3.02191C8.24552 3.17819 8.33332 3.39015 8.33332 3.61117Z" fill="#DD2E44"/>
+                <path d="M10 3.61117C10 3.83218 9.91221 4.04414 9.75593 4.20042C9.59965 4.3567 9.38769 4.4445 9.16667 4.4445H8.05556C7.83455 4.4445 7.62259 4.3567 7.46631 4.20042C7.31003 4.04414 7.22223 3.83218 7.22223 3.61117C7.22223 3.39015 7.31003 3.17819 7.46631 3.02191C7.62259 2.86563 7.83455 2.77783 8.05556 2.77783H9.16667C9.38769 2.77783 9.59965 2.86563 9.75593 3.02191C9.91221 3.17819 10 3.39015 10 3.61117Z" fill="#55ACEE"/>
+            </svg>
+            
+            <span>Страховка</span>
+        </div
+        </div>
+        </div>
+        
+
+
+        <div class="order__offer-row-checks" style="gap: 14px;">
+
+            <div class="custom__checkbox-col">
+                <div class="custom__checkbox">
+            
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.69133 23.2106C0.529333 22.0086 0.666667 13.8126 0.666667 11.3333H23.3333C23.3333 12.6093 23.3913 21.8466 14.5833 23.2786C13.222 23.4999 10.278 23.4446 8.69133 23.2106Z" fill="#292F33"/>
+                        <path d="M22.2587 8.83114C23.9033 5.11514 16.7047 5.32848 14.902 5.90981C13.9388 5.79735 12.9698 5.74081 12 5.74048C5.74067 5.74048 0.666667 7.89248 0.666667 11.3698C0.666667 12.0425 0.860667 12.6891 1.212 13.2971C-1.67267 17.1051 4.04267 17.8211 7.33467 17.1038C8.75867 17.4618 10.3347 17.6665 12 17.6665C18.2593 17.6665 23.3333 14.8471 23.3333 11.3705C23.3333 10.4171 22.9407 9.56781 22.2587 8.83114Z" fill="#66757F"/>
+                        <path d="M12 16.6666C17.5228 16.6666 22 14.5772 22 11.9999C22 9.42259 17.5228 7.33325 12 7.33325C6.47715 7.33325 2 9.42259 2 11.9999C2 14.5772 6.47715 16.6666 12 16.6666Z" fill="#FFCC4D"/>
+                        <path d="M2.66667 10.6667C2.30533 9.22067 4 6.66667 7.33333 7.33333C8 6.66667 9.22533 6 11.3333 6C12.6667 6 15.0747 7.18333 14 9.33333C13.3333 10.6667 10.6667 12.6667 7.33333 11.3333C6.66667 12 3.33333 13.3333 2.66667 10.6667Z" fill="#77B255"/>
+                        <path d="M8 11.3334C7.834 11.3574 7.686 11.3821 7.548 11.4074C10.78 12.5714 13.348 10.6374 14 9.33343C14.7187 7.8961 13.8793 6.89343 12.846 6.38477C13.1087 7.59943 12.094 10.7488 8 11.3334Z" fill="#5C913B"/>
+                        <path d="M3.33333 10.6668C3.68333 9.79142 6.66667 8.66675 10 12.6668C10.6667 13.3334 13.0573 13.7241 14 14.6668C14.6667 15.3334 14 16.0001 11.3333 16.0001C8.66667 16.0001 2 14.0001 3.33333 10.6668Z" fill="#D99E82"/>
+                        <path d="M4.02733 13.3452C5.726 15.0405 9.48733 15.9999 11.3333 15.9999C14 15.9999 14.6667 15.3332 14 14.6665C13.7827 14.4492 13.4867 14.2619 13.1547 14.0932C11.0187 15.2485 5.368 13.9972 4.02733 13.3452Z" fill="#B27962"/>
+                        <path d="M18 12.6672C17.8607 12.6672 17.718 12.6445 17.578 12.5979L15.578 11.9312C15.2425 11.8194 14.9652 11.5788 14.807 11.2625C14.6489 10.9462 14.6228 10.58 14.7347 10.2445C14.8465 9.90903 15.087 9.63169 15.4033 9.47354C15.7197 9.31538 16.0858 9.28936 16.4213 9.40119L18.4213 10.0679C18.7225 10.1674 18.9783 10.371 19.1428 10.6421C19.3074 10.9132 19.3699 11.2341 19.3191 11.5472C19.2684 11.8603 19.1077 12.145 18.8659 12.3503C18.6242 12.5555 18.3172 12.6679 18 12.6672ZM17.3333 14.6665H16C15.8232 14.6665 15.6536 14.5963 15.5286 14.4713C15.4036 14.3462 15.3333 14.1767 15.3333 13.9999C15.3333 13.823 15.4036 13.6535 15.5286 13.5285C15.6536 13.4034 15.8232 13.3332 16 13.3332H17.3333C17.5101 13.3332 17.6797 13.4034 17.8047 13.5285C17.9298 13.6535 18 13.823 18 13.9999C18 14.1767 17.9298 14.3462 17.8047 14.4713C17.6797 14.5963 17.5101 14.6665 17.3333 14.6665Z" fill="#FFE8B6"/>
+                    </svg>
+
+                    
+                    <span>Питание:</span>
+            
+                </div>
+                <ul>
+                    <li>
+                       
+                        <input type="radio" id="RO" name="food" value="Room only (RO)" checked>
+                        <label for="RO">Room only (RO)</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="BB" name="food" value="Bed & breakfast (BB)">
+                        <label for="BB">Bed & breakfast (BB)</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="HB" name="food" value="Half board (HB)">
+                        <label for="HB">Half board (HB)</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="FB" name="food" value="Full Board (FB)">
+                        <label for="FB">Full Board (FB)</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="HB+" name="food" value="HB+">
+                        <label for="HB+">HB+ </label>
+                    </li>
+                    <li>
+                        <input type="radio" id="FB+" name="food" value="FB+">
+                        <label for="FB+">FB+</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="AI" name="food" value="All inclusive (AI)">
+                        <label for="AI">All inclusive (AI)</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="UAI" name="food" value="Ultra All inclusive (UAI)">
+                        <label for="UAI">Ultra All inclusive (UAI)</label>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <div class="custom__checkbox-col">
+                <div class="custom__checkbox">
+            
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_63_4720)">
+                    <path d="M14 9.99992C14 10.7072 13.719 11.3854 13.219 11.8855C12.7189 12.3856 12.0406 12.6666 11.3333 12.6666H2.66667C1.95942 12.6666 1.28115 12.3856 0.781049 11.8855C0.280952 11.3854 0 10.7072 0 9.99992V7.99992C0 7.29267 0.280952 6.6144 0.781049 6.1143C1.28115 5.6142 1.95942 5.33325 2.66667 5.33325H11.3333C12.0406 5.33325 12.7189 5.6142 13.219 6.1143C13.719 6.6144 14 7.29267 14 7.99992V9.99992Z" fill="#C1694F"/>
+                    <path d="M24 4.00008C24 4.70733 23.719 5.3856 23.2189 5.8857C22.7188 6.3858 22.0406 6.66675 21.3333 6.66675H13.3333C12.6261 6.66675 11.9478 6.3858 11.4477 5.8857C10.9476 5.3856 10.6667 4.70733 10.6667 4.00008V3.33341C10.6667 2.62617 10.9476 1.94789 11.4477 1.4478C11.9478 0.9477 12.6261 0.666748 13.3333 0.666748H21.3333C22.0406 0.666748 22.7188 0.9477 23.2189 1.4478C23.719 1.94789 24 2.62617 24 3.33341V4.00008Z" fill="#C1694F"/>
+                    <path d="M0 8V22.6667C0 23.0203 0.140476 23.3594 0.390524 23.6095C0.640573 23.8595 0.979711 24 1.33333 24H22V8H0Z" fill="#FFCC4D"/>
+                    <path d="M1.33334 21.3333H9.33334V23.9999H1.33334V21.3333ZM1.33334 17.3333H12V19.9999H1.33334V17.3333Z" fill="#55ACEE"/>
+                    <path d="M10.6667 3.3335V24.0002H22.6667C23.0203 24.0002 23.3594 23.8597 23.6095 23.6096C23.8595 23.3596 24 23.0205 24 22.6668V3.3335H10.6667Z" fill="#FFE8B6"/>
+                    <path d="M12 13.3333H22.6667V15.9999H12V13.3333ZM12 9.33325H22.6667V11.9999H12V9.33325ZM12 5.33325H22.6667V7.99992H12V5.33325ZM12 17.3333H22.6667V19.9999H12V17.3333Z" fill="#55ACEE"/>
+                    <path d="M14.6667 4.66675H16V20.6667H14.6667V4.66675ZM18.6667 4.66675H20V20.6667H18.6667V4.66675Z" fill="#FFE8B6"/>
+                    <path d="M14.6667 21.3335H20V24.0002H14.6667V21.3335ZM6.66669 9.3335V12.0002H4.00002V9.3335H2.66669V16.0002H4.00002V13.3335H6.66669V16.0002H8.00002V9.3335H6.66669Z" fill="#3B88C3"/>
+                    <path d="M4.66666 16.6667H5.99999V20.6667H4.66666V16.6667ZM9.33332 16.6667H10.6667V20.6667H9.33332V16.6667Z" fill="#FFCC4D"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_63_4720">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                </svg>
+                
+
+                    
+                    <span>Проживание:</span>
+            
+                </div>
+                    <ul>
+                        <li>
+                        
+                            <input type="radio" id="SGL" name="habitation" value="Single (SGL)" checked>
+                            <label for="SGL">Single (SGL)</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="DBL" name="habitation" value="Double (DBL)">
+                            <label for="DBL">Double (DBL)</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="TWN" name="habitation" value="Twin (TWN)">
+                            <label for="TWN">Twin (TWN)</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="DBL+ЕХВ" name="habitation" value="DBL + ЕХВ">
+                            <label for="DBL+ЕХВ">DBL + ЕХВ</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="TRPL" name="habitation" value="Triple (TRPL)">
+                            <label for="TRPL">Triple (TRPL)</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="QDPL" name="habitation" value="Quadriple (QDPL)">
+                            <label for="QDPL">Quadriple (QDPL)</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="ADL" name="habitation" value="5 ADL">
+                            <label for="ADL">5 ADL</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="ROH" name="habitation" value="Run of house (ROH)">
+                            <label for="ROH">Run of house (ROH)</label>
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+
+
         <p>Цена тура</p>
 
         <div class="order__offer-row">
@@ -253,29 +455,35 @@ const firebaseConfig = {
         // Вставляем созданный HTML в контейнер
         detailsContainer.innerHTML += orderDetailsHtml;
         const imgInputHelper = document.getElementById("add-single-img");
-const imgInputHelperLabel = document.getElementById("add-img-label");
-const imgContainer = document.querySelector(".custom__image-container");
-const imgFiles = [];
-
-const addImgHandler = () => {
-    const file = imgInputHelper.files[0];
-    if (!file) return;
-    // Generate img preview
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      const newImg = document.createElement("img");
-      newImg.src = reader.result;
-      imgContainer.insertBefore(newImg, imgInputHelperLabel);
-      imgInputHelperLabel.parentNode.removeChild(imgInputHelperLabel);
-    };
-    // Store img file
-    imgFiles.push(file);
-    // Reset image input
-    imgInputHelper.value = "";
-    return;
-  };
-  imgInputHelper.addEventListener("change", addImgHandler);
+        const imgInputHelperLabel = document.getElementById("add-img-label");
+        const imgContainer = document.querySelector(".custom__image-container");
+        const imgFiles = [];
+        let imgPreviewUrl = ''; // Переменная для хранения URL изображения
+        
+        const addImgHandler = () => {
+            const file = imgInputHelper.files[0];
+            if (!file) return;
+            // Generate img preview
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+              const newImg = document.createElement("img");
+              newImg.src = reader.result;
+              imgContainer.insertBefore(newImg, imgInputHelperLabel);
+              imgInputHelperLabel.parentNode.removeChild(imgInputHelperLabel);
+              
+              // Сохраняем URL изображения в localStorage
+              imgPreviewUrl = reader.result;
+              localStorage.setItem('imgPreviewUrl', imgPreviewUrl);
+            };
+            // Store img file
+            imgFiles.push(file);
+            // Reset image input
+            imgInputHelper.value = "";
+            return;
+        };
+        imgInputHelper.addEventListener("change", addImgHandler);
+        
   
 
   var database = firebase.database();
@@ -285,17 +493,75 @@ const addImgHandler = () => {
       console.log('Отправлена заявка');
       // Собираем значения из input полей
       var hotelImg = $('#add-single-img')[0].files[0];
+    //   var hotelImg =localStorage.getItem('imgPreviewUrl');
+      console.log(hotelImg);
       var hotelName = $('#hotel_name').val();
       var hotelDesc = $('#hotel_desc').val();
       var cityTour = $('#city_tour').val();
       var dataStart = $('#data_start').val();
       var dataEnd = $('#data_end').val();
-      var price = $('#price').val();
+      var price = parseInt($('#price').val(), 10);
       var city = childData.city;
       var country = childData.country;
       var order_ID = new URLSearchParams(window.location.search).get('id');
-      var night = $('.selected__direction').text();
-  
+      var checkboxFlight = document.getElementById("flight");
+      if(checkboxFlight.checked) {
+        flight = true;
+    } else {
+        flight = false;
+    }
+    var checkboxTransfer = document.getElementById("transfer");
+    if(checkboxTransfer.checked) {
+        transfer = true;
+  } else {
+    transfer = false;
+  }
+  var checkboxInsurance = document.getElementById("insurance");
+  if(checkboxInsurance.checked) {
+    insurance = true;
+} else {
+    insurance = false;
+}
+
+
+
+
+var radiosFood = document.getElementsByName("food");
+
+// Проходим по каждой радиокнопке
+for(var i = 0; i < radiosFood.length; i++) {
+    // Проверяем, выбрана ли текущая радиокнопка
+    if(radiosFood[i].checked) {
+        // Если да, то сохраняем ее значение в переменную
+        var food = radiosFood[i].value;
+        break; // Выходим из цикла после первого найденного выбранного значения
+    }
+}
+
+var radiosHabitation = document.getElementsByName("habitation");
+
+// Проходим по каждой радиокнопке
+for(var i = 0; i < radiosHabitation.length; i++) {
+    // Проверяем, выбрана ли текущая радиокнопка
+    if(radiosHabitation[i].checked) {
+        // Если да, то сохраняем ее значение в переменную
+        var habitation = radiosHabitation[i].value;
+        break; // Выходим из цикла после первого найденного выбранного значения
+    }
+}
+    //   var night = $('.selected__direction').text();
+      var text = $('.selected__direction').text(); // Получаем текст
+var match = text.match(/\d+/); // Ищем первое число в тексте
+
+if (match && match[0]) { // Проверяем, найдено ли число
+    var night = parseInt(match[0], 10); // Преобразуем найденную строку в число
+} else {
+    console.error('Число не найдено');
+}
+
+      var person = childData.tourists_count;
+      var userData = JSON.parse(localStorage.getItem('user'));
+      var uid = userData.uid;
       // Создаем путь для хранения файла в Firebase Storage
       var imageRef = storageRef.child(`${order_ID}.jpg`);
   
@@ -303,6 +569,9 @@ const addImgHandler = () => {
       imageRef.put(hotelImg).then(function(snapshot) {
           // Получаем URL-адрес загруженного файла после завершения загрузки
           snapshot.ref.getDownloadURL().then(function(downloadURL) {
+
+            // Отображаем изображение в интерфейсе пользователя
+
               console.log('File available at', downloadURL);
   
               // Путь к новой записи в базе данных
@@ -320,11 +589,24 @@ const addImgHandler = () => {
                   data_end: dataEnd,
                   data_start: dataStart,
                   price: price,
-                  hotel_img: downloadURL // Сохраняем URL-адрес файла вместо самого файла
+                  person: person, 
+                  booking: false, 
+                  uid: uid,
+                  hotel_img: 'https://firebasestorage.googleapis.com/v0/b/tourpin-e4117.appspot.com/o/NyvxdrxZl5kw3j2EbEX.jpeg?alt=media&token=cfe42bf8-b376-4385-8a56-c9e2440fca7f', // Сохраняем URL-адрес файла вместо самого файла
+                  additions: {
+                    flight: flight, 
+                    transfer: transfer, 
+                    insurance: insurance, 
+                    food: food, 
+                    habitation: habitation
+                  }
               };
   
               // Сохраняем данные в Firebase
               newProposalRef.push(proposalData);
+     
+       
+  
           }).catch(function(error) {
               console.error("Ошибка при получении URL-адреса файла:", error);
           });
